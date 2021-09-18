@@ -2,6 +2,10 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "First project on Hexlet",
+  "bin": {
+      "brain-games": "bin/brain-games.js"
+  },
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
