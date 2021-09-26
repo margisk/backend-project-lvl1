@@ -33,7 +33,7 @@ const evenOddGame = () => {
     const userAnswer = askUser(numberToAsk);
 
     if (!isAnswerCorrect(numberToAsk, userAnswer)) {
-      console.log(`${userAnswer} is the wrong answer :(. The correct answer was ${isEvenExplicit(numberToAsk)})`);
+      console.log(`${userAnswer} is the wrong answer :(. The correct answer was ${isEvenExplicit(numberToAsk)}`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
