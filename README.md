@@ -5,4 +5,4 @@
 
 Short demo:
 
-[![asciicast](https://asciinema.org/a/zvYhT2QapSLgBFkbXglsTPnp3.svg)](https://asciinema.org/a/zvYhT2QapSLgBFkbXglsTPnp3)
+[![asciicast](https://asciinema.org/a/NgkEmg5Lmpg79F9nvKsbJPztZ.svg)](https://asciinema.org/a/NgkEmg5Lmpg79F9nvKsbJPztZ)
