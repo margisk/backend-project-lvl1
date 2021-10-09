@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getUserName from './cli.js';
+import getUserName from '../cli.js';
 
 const getRandomInt = () => Math.floor(Math.random() * 100);
 
