@@ -1,5 +1,5 @@
 import {
-  cons, car, cdr, toString, isPair,
+  cons, car, cdr, isPair,
 } from '@hexlet/pairs';
 
 import {
