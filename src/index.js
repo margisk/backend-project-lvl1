@@ -22,7 +22,7 @@ export const askUser = (questionContent) => {
 };
 
 export const isAnswerCorrect = (correctAnswer, userAnswer) => {
-  if (userAnswer !== correctAnswer) {
+  if (userAnswer !== correctAnswer.toString()) {
     return false;
   }
 

@@ -26,7 +26,7 @@ const calculateCorrectAnswer = (expr) => {
     answer = num1 * num2;
   }
 
-  return answer.toString();
+  return answer;
 };
 
 const prettifyExpression = (expr) => {
