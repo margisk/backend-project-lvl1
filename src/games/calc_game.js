@@ -48,8 +48,8 @@ const calcGame = () => {
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswersToWin) {
-    const firstNumberToAsk = getRandomInt();
-    const secondNumberToAsk = getRandomInt();
+    const firstNumberToAsk = getRandomInt(100);
+    const secondNumberToAsk = getRandomInt(100);
     const operation = getRandomOperation();
     const expression = cons(operation, cons(firstNumberToAsk, secondNumberToAsk));
     const userAnswer = askUser(prettifyExpression(expression));

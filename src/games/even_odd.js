@@ -13,7 +13,7 @@ const evenOddGame = () => {
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswersToWin) {
-    const numberToAsk = getRandomInt();
+    const numberToAsk = getRandomInt(100);
     const userAnswer = askUser(numberToAsk);
     const calculatedAnswer = isEvenExplicit(numberToAsk);
 

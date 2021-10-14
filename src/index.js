@@ -8,7 +8,7 @@ export const greetUser = (userName) => {
   console.log(`Hello, ${userName}!`);
 };
 
-export const getRandomInt = () => Math.floor(Math.random() * 100);
+export const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 export const getRandomOperation = () => {
   const operations = ['+', '-', '*'];

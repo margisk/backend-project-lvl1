@@ -44,8 +44,8 @@ const gcdGame = () => {
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswersToWin) {
-    const firstNumberToAsk = getRandomInt();
-    const secondNumberToAsk = getRandomInt();
+    const firstNumberToAsk = getRandomInt(100);
+    const secondNumberToAsk = getRandomInt(100);
     const numberPair = cons(firstNumberToAsk, secondNumberToAsk);
     const userAnswer = askUser(prettifyPair(numberPair));
     const calculatedAnswer = calculateGCD(numberPair);
