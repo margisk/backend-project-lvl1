@@ -28,3 +28,26 @@ export const isAnswerCorrect = (correctAnswer, userAnswer) => {
 
   return true;
 };
+
+export const runGame = (instruction, gameContentCreator) => {
+  const userName = getUserName();
+  greetUser(userName);
+  console.log(instruction);
+
+  let correctAnswerCounter = 0;
+
+  while (correctAnswerCounter < correctAnswersToWin) {
+    const [taskForUser, correctAnswer] = gameContentCreator();
+    const userAnswer = askUser(taskForUser);
+    if (!isAnswerCorrect(correctAnswer, userAnswer)) {
+      console.log(`${userAnswer} is the wrong answer :(. The correct answer was ${correctAnswer}`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
+
+    correctAnswerCounter += 1;
+    console.log('Correct!');
+  }
+
+  console.log(`Congratulations, ${userName}!`);
+};

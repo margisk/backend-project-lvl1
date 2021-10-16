@@ -2,10 +2,9 @@ import {
   cons, car, cdr, isPair,
 } from '@hexlet/pairs';
 
-import {
-  correctAnswersToWin, getUserName, greetUser,
-  getRandomInt, getRandomOperation, askUser, isAnswerCorrect,
-} from '../index.js';
+import { getRandomInt, getRandomOperation } from '../index.js';
+
+export const gameInstruction = 'What is the result of the expression?';
 
 const calculateCorrectAnswer = (expr) => {
   let answer = 0;
@@ -40,32 +39,11 @@ const prettifyExpression = (expr) => {
   return `${firstNumber} ${operation} ${secondNumber}`;
 };
 
-const calcGame = () => {
-  const userName = getUserName();
-  greetUser(userName);
-  console.log('What is the result of the expression?');
-
-  let correctAnswerCounter = 0;
-
-  while (correctAnswerCounter < correctAnswersToWin) {
-    const firstNumberToAsk = getRandomInt(100);
-    const secondNumberToAsk = getRandomInt(100);
-    const operation = getRandomOperation();
-    const expression = cons(operation, cons(firstNumberToAsk, secondNumberToAsk));
-    const userAnswer = askUser(prettifyExpression(expression));
-    const calculatedAnswer = calculateCorrectAnswer(expression);
-
-    if (!isAnswerCorrect(calculatedAnswer, userAnswer)) {
-      console.log(`${userAnswer} is the wrong answer :(. The correct answer was ${calculatedAnswer}`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-
-    correctAnswerCounter += 1;
-    console.log('Correct!');
-  }
-
-  console.log(`Congratulations, ${userName}!`);
+export const createGameContent = () => {
+  const firstNumberToAsk = getRandomInt(100);
+  const secondNumberToAsk = getRandomInt(100);
+  const operation = getRandomOperation();
+  const expression = cons(operation, cons(firstNumberToAsk, secondNumberToAsk));
+  const calculatedAnswer = calculateCorrectAnswer(expression);
+  return [prettifyExpression(expression), calculatedAnswer];
 };
-
-export default calcGame;

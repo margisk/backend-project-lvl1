@@ -1,6 +1,7 @@
 #!/usr/bin/env node
+import { runGame } from '../src/index.js';
 
-import gcdGame from '../src/games/gcd.js';
+import { gameInstruction, createGameContent } from '../src/games/gcd.js';
 
 console.log('Welcome to the Brain Games!');
-gcdGame();
+runGame(gameInstruction, createGameContent);
