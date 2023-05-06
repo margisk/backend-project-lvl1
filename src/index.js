@@ -1,8 +1,5 @@
 import readlineSync from 'readline-sync';
-import {
-  cons, car, cdr,
-} from '@hexlet/pairs';
-import { createGameContent } from './games/brain-calc.js';
+import { car, cdr } from '@hexlet/pairs';
 
 const getUserName = () => readlineSync.question('May I have your name? ');
 

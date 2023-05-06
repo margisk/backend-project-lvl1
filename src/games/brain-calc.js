@@ -1,7 +1,4 @@
-import {
-  cons, car, cdr, isPair, toString,
-} from '@hexlet/pairs';
-
+import cons from '@hexlet/pairs';
 import { getRandomInt, getRandomOperator } from '../index.js';
 
 export const gameInstruction = 'What is the result of the expression?';
