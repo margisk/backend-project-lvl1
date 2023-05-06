@@ -1,4 +1,4 @@
-import cons from '@hexlet/pairs';
+import { cons } from '@hexlet/pairs';
 import { getRandomInt } from '../index.js';
 
 export const instruction = 'Answer "yes" if the number is even, otherwise answer "no"';
