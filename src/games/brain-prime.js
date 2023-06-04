@@ -5,7 +5,7 @@ export const gameInstruction = 'Answer "yes" if given number is prime. Otherwise
 
 const isPrime = (number) => {
   const result = true;
-  for (let i = 2; i < Math.floor(number / 2); i += 1) {
+  for (let i = 2; i < Math.sqrt(number); i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -14,7 +14,7 @@ const isPrime = (number) => {
 };
 
 export const createGameContent = () => {
-  const number = getRandomInt(100);
+  const number = getRandomInt(1000);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const expression = `${number}`;
   return cons(expression, correctAnswer);
