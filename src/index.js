@@ -7,7 +7,7 @@ const greetUser = (name) => console.log(`Hello, ${name}!`);
 
 // move these functions to util?
 
-export const getRandomInt = (max) => Math.round(Math.random() * max);
+export const getRandomInt = (max, min = 0) => Math.floor(Math.random() * (max - min + 1) + min);
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
